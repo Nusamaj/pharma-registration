@@ -160,6 +160,37 @@ export default function EnHomePage() {
           </div>
         </div>
       </section>
+{/* MISSION & VISION */}
+<section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+  <div className="grid gap-10 md:grid-cols-2">
+    {/* Mission */}
+    <div className="flex gap-4 fade-up">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
+        <Target className="h-6 w-6" />
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold">Mission</h3>
+        <p className="mt-2 text-slate-600 leading-7">
+          Our mission at Pharma Registration is to provide high-quality regulatory
+          affairs consultations to pharmaceutical, cosmetical, and medical
+          device companies—enabling them to bring safe and effective products to
+          market efficiently. We are dedicated to supporting our clients in
+          achieving regulatory compliance and operational excellence.
+        </p>
+      </div>
+    </div>
+
+    {/* Vision */}
+    <div className="flex gap-4 fade-up">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
+        <Eye className="h-6 w-6" />
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold">Vision</h3>
+        <p className="mt-2 text-slate-600 leading-7">
+          At Pharma Registration, our vision is
 
       {/* VALUES */}
       <section className="border-t border-white/40">
