@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { Pill, Stethoscope, Sparkles, Apple, ShieldCheck } from "lucide-react";
+import {
+  Pill,
+  Stethoscope,
+  Sparkles,
+  Apple,
+  ShieldCheck,
+  Target,
+  Eye,
+} from "lucide-react";
 
 const services = [
   {
@@ -109,7 +117,7 @@ export default function EnHomePage() {
               </div>
             </div>
 
-            {/* HERO GLASS CARD */}
+            {/* HERO GLASS */}
             <div className="glass-card glass-card-hover p-6 fade-up">
               <p className="text-sm font-semibold">Trusted Regulatory Support</p>
               <p className="mt-2 text-sm text-slate-600 leading-7">
@@ -128,7 +136,7 @@ export default function EnHomePage() {
                     className="flex items-center gap-3 rounded-xl border border-white/40 bg-white/60 backdrop-blur px-4 py-3 text-sm"
                   >
                     <ShieldCheck className="h-4 w-4 text-sky-600" />
-                    <span className="text-slate-700">{x}</span>
+                    <span>{x}</span>
                   </div>
                 ))}
               </div>
@@ -144,8 +152,8 @@ export default function EnHomePage() {
             <h2 className="text-2xl font-semibold">About Us</h2>
             <p className="mt-4 text-slate-600 leading-7">
               Pharma Registration delivers precise regulatory and advisory
-              services tailored to your business needs, helping you save time
-              and focus on growth while ensuring full regulatory compliance.
+              services tailored to your business needs—saving you time while
+              ensuring full regulatory compliance.
             </p>
           </div>
 
@@ -153,44 +161,51 @@ export default function EnHomePage() {
             <p className="text-sm font-semibold">What you can expect</p>
             <ul className="mt-4 space-y-2 text-sm text-slate-600 leading-7">
               <li>• Clear SFDA-aligned regulatory pathways</li>
-              <li>• Accurate document preparation and review</li>
-              <li>• Practical compliance and operational guidance</li>
-              <li>• Responsive, client-focused communication</li>
+              <li>• Accurate documentation preparation</li>
+              <li>• Practical compliance guidance</li>
+              <li>• Client-first communication</li>
             </ul>
           </div>
         </div>
       </section>
-{/* MISSION & VISION */}
-<section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-  <div className="grid gap-10 md:grid-cols-2">
-    {/* Mission */}
-    <div className="flex gap-4 fade-up">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
-        <Target className="h-6 w-6" />
-      </div>
 
-      <div>
-        <h3 className="text-xl font-semibold">Mission</h3>
-        <p className="mt-2 text-slate-600 leading-7">
-          Our mission at Pharma Registration is to provide high-quality regulatory
-          affairs consultations to pharmaceutical, cosmetical, and medical
-          device companies—enabling them to bring safe and effective products to
-          market efficiently. We are dedicated to supporting our clients in
-          achieving regulatory compliance and operational excellence.
-        </p>
-      </div>
-    </div>
+      {/* MISSION & VISION (NO CARDS) */}
+      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <div className="grid gap-10 md:grid-cols-2">
+          {/* Mission */}
+          <div className="flex gap-4 fade-up">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
+              <Target className="h-6 w-6" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Mission</h3>
+              <p className="mt-2 text-slate-600 leading-7">
+                Our mission at Pharma Registration is to provide high-quality
+                regulatory affairs consultations to pharmaceutical, cosmetical,
+                and medical device companies—enabling them to bring safe and
+                effective products to market efficiently while achieving
+                regulatory compliance and operational excellence.
+              </p>
+            </div>
+          </div>
 
-    {/* Vision */}
-    <div className="flex gap-4 fade-up">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
-        <Eye className="h-6 w-6" />
-      </div>
-
-      <div>
-        <h3 className="text-xl font-semibold">Vision</h3>
-        <p className="mt-2 text-slate-600 leading-7">
-          At Pharma Registration, our vision is
+          {/* Vision */}
+          <div className="flex gap-4 fade-up">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
+              <Eye className="h-6 w-6" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Vision</h3>
+              <p className="mt-2 text-slate-600 leading-7">
+                At Pharma Registration, our vision is to be the preferred partner
+                for pharmaceutical and medical device companies seeking
+                regulatory expertise and guidance, while continuously expanding
+                our services and global reach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* VALUES */}
       <section className="border-t border-white/40">
@@ -212,19 +227,10 @@ export default function EnHomePage() {
         </div>
       </section>
 
-      {/* SERVICES PREVIEW */}
+      {/* SERVICES */}
       <section className="border-t border-white/40">
         <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <div className="flex items-end justify-between gap-4">
-            <h2 className="text-2xl font-semibold">Services</h2>
-            <Link
-              href="/en/services"
-              className="text-sm font-medium text-slate-700 hover:underline"
-            >
-              View all
-            </Link>
-          </div>
-
+          <h2 className="text-2xl font-semibold">Services</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {services.map((s) => {
               const Icon = s.icon;
@@ -233,59 +239,23 @@ export default function EnHomePage() {
                   key={s.title}
                   className="glass-card glass-card-hover p-6 fade-up"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="glass-icon mt-1">
+                  <div className="flex gap-4">
+                    <div className="glass-icon">
                       <Icon className="h-5 w-5 text-sky-700" />
                     </div>
-
                     <div>
                       <p className="font-semibold">{s.title}</p>
-                      <ul className="mt-3 space-y-1 text-sm text-slate-600 leading-7">
+                      <ul className="mt-3 space-y-1 text-sm text-slate-600">
                         {s.items.map((item) => (
                           <li key={item}>• {item}</li>
                         ))}
                       </ul>
-
-                      <Link
-                        href="/en/services"
-                        className="mt-3 inline-block text-sm font-medium text-sky-700 hover:underline"
-                      >
-                        See more →
-                      </Link>
                     </div>
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <div className="glass-card p-10 text-center fade-up">
-            <h3 className="text-2xl font-semibold">
-              Let’s support your regulatory needs
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 leading-7">
-              Share your company details and product category, and we’ll guide
-              you through the best regulatory pathway.
-            </p>
-            <div className="mt-6">
-              <Link
-                href="/en/contact"
-                className="rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          <p className="mt-6 text-xs text-slate-500">
-            Regulatory disclaimer: Website content is for informational purposes
-            only and does not replace official SFDA guidance.
-          </p>
         </div>
       </section>
     </main>
