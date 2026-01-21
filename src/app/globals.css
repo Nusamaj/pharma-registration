@@ -85,3 +85,14 @@ body {
   @apply flex h-11 w-11 items-center justify-center rounded-full
          bg-white/60 backdrop-blur border border-white/40;
 }
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      backdropBlur: {
+        xs: '2px',
+      }
+    },
+  },
+  plugins: [],
+}
