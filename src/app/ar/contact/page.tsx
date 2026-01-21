@@ -33,8 +33,7 @@ export default function ContactArPage() {
           تواصل معنا
         </h1>
         <p className="mt-3 mx-auto max-w-2xl text-slate-600 leading-7">
-          تواصل معنا للحصول على الدعم التنظيمي وإرشاد إعداد ملفات التسجيل. سنرد
-          عليك في أقرب وقت ممكن.
+         أرسل تفاصيل المنتج المراد تسجيله لنقترح عليك المسار الأنسب مع جميع المتطلبات والتكاليف، سنرد عليك في أقرب وقت ممكن.
         </p>
       </section>
 
@@ -71,8 +70,7 @@ export default function ContactArPage() {
             راسلنا الآن
           </h2>
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            أرسل لنا معلومات شركتك ونوع المنتج، وسنقترح عليك أفضل مسار
-            ومتطلبات التسجيل.
+           شاركنا تفاصيل المنتج الذي ترغب في تسجيله عبر البريد الإلكتروني، وسنقترح أفضل مسار تسجيل مع توضيح المتطلبات والأسعار.
           </p>
 
           <form className="mt-6 grid gap-3">
@@ -134,7 +132,7 @@ export default function ContactArPage() {
         <div className="rounded-3xl bg-sky-900 p-10 text-center text-white">
           <h3 className="text-2xl font-semibold italic">لنبدأ العمل معًا</h3>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-sky-100/80">
-            ندعم الامتثال التنظيمي ودخول السوق بكفاءة عبر مختلف فئات المنتجات.
+           نساعد عملاءنا على تسجيل منتجاتهم لدى هيئة الغذاء والدواء السعودية بكفاءة وسلاسة، لضمان دخول آمن وسريع إلى السوق
           </p>
           <div className="mt-8">
             <a
