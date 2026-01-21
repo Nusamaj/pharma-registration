@@ -5,6 +5,7 @@ import {
   Sparkles,
   Apple,
   ShieldCheck,
+  ArrowLeft,
 } from "lucide-react";
 
 const services = [
@@ -13,7 +14,7 @@ const services = [
     icon: Pill,
     items: [
       "تقديم حلول لوجستية للشركات الدوائية",
-      "ترخيص الشركات الدوائية لدى هيئة الغذاء والدواء",
+      "ترخيص الشركات لدى هيئة الغذاء والدواء",
       "تسجيل الأدوية البشرية",
       "إعداد إجراءات التشغيل القياسية (SOPs)",
     ],
@@ -23,7 +24,7 @@ const services = [
     icon: Stethoscope,
     items: [
       "ترخيص الشركات الطبية",
-      "إعداد ومراجعة ملفات تسجيل الأجهزة الطبية",
+      "إعداد ومراجعة ملفات تسجيل الأجهزة",
       "تسجيل الأجهزة الطبية (MDMA)",
       "طلبات فسح الاستيراد",
     ],
@@ -33,8 +34,8 @@ const services = [
     icon: Sparkles,
     items: [
       "ترخيص شركات مستحضرات التجميل",
-      "مراجعة الملصقات والملفات",
-      "تسجيل منتجات مستحضرات التجميل",
+      "مراجعة الملصقات والملفات التنظيمية",
+      "تسجيل منتجات التجميل",
       "طلبات فسح الاستيراد",
     ],
   },
@@ -50,92 +51,76 @@ const services = [
 ];
 
 const values = [
-  {
-    title: "التميّز",
-    text: "نلتزم بتقديم خدمات تنظيمية بأعلى معايير الجودة.",
-  },
-  {
-    title: "النزاهة",
-    text: "نعمل بشفافية وصدق والتزام أخلاقي.",
-  },
-  {
-    title: "التعاون",
-    text: "نؤمن بالشراكات الفعالة والعمل بروح الفريق.",
-  },
-  {
-    title: "الابتكار",
-    text: "نقدم حلولًا عملية مواكبة للتغيّرات التنظيمية.",
-  },
-  {
-    title: "تركيز العميل",
-    text: "نضع العميل في قلب كل خطوة تنظيمية.",
-  },
+  { title: "التميّز", text: "نلتزم بتقديم خدمات تنظيمية بأعلى معايير الجودة والدقة." },
+  { title: "النزاهة", text: "نعمل بشفافية وصدق والتزام أخلاقي في كل تعاملاتنا." },
+  { title: "التعاون", text: "نؤمن بالشراكات الفعالة مع عملائنا والجهات التنظيمية." },
+  { title: "الابتكار", text: "نقدم حلولًا عملية مواكبة للتغيّرات في الأنظمة والقوانين." },
+  { title: "تركيز العميل", text: "نضع احتياجات العميل في قلب كل خطوة نقوم بها." },
 ];
 
 export default function ArHomePage() {
   return (
-    <main
-      dir="rtl"
-      className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-blue-50 text-slate-900"
-    >
-      {/* HERO */}
-      <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <div className="fade-up">
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs text-slate-600">
+    <main dir="rtl" className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-blue-50 text-slate-900">
+      
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden border-b border-white/40">
+        <div className="mx-auto max-w-6xl px-4 py-14 md:py-24">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div>
+              <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700">
                 الشؤون التنظيمية • السوق السعودي
               </p>
 
-              <h1 className="mt-4 text-3xl font-semibold md:text-5xl">
+              <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-6xl text-slate-900">
                 فارما ريجستريشن
               </h1>
 
-              <p className="mt-4 text-lg text-slate-600">
+              <p className="mt-4 text-xl text-slate-600 font-medium">
                 حلول تنظيمية موثوقة لدخول السوق السعودي بثقة
               </p>
 
-              <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">
-                بخبرة تتجاوز <span className="font-semibold">13 عامًا</span>،
-                نساعد الشركات على تحقيق الامتثال التنظيمي وتبسيط الإجراءات.
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600">
+                بخبرة تتجاوز <span className="font-bold text-sky-600">13 عامًا</span>، 
+                نحن شريككم الاستراتيجي لضمان الامتثال لمتطلبات هيئة الغذاء والدواء (SFDA) وتسريع دخول منتجاتكم للسوق.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-10 flex flex-wrap gap-4">
                 <Link
                   href="/ar/contact"
-                  className="rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
+                  className="rounded-xl bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-200 hover:bg-sky-700 transition-all"
                 >
-                  تواصل معنا
+                  ابدأ الآن
                 </Link>
                 <Link
                   href="/ar/services"
-                  className="rounded-xl border border-white/40 bg-white/60 backdrop-blur px-5 py-3 text-sm font-medium hover:bg-white/70"
+                  className="glass-card px-6 py-3.5 text-sm font-semibold hover:bg-white/80 transition-all"
                 >
-                  خدماتنا
+                  استعرض خدماتنا
                 </Link>
               </div>
             </div>
 
-            {/* HERO GLASS CARD */}
-            <div className="glass-card glass-card-hover p-6 fade-up">
-              <p className="text-sm font-semibold">دعم تنظيمي شامل</p>
-              <p className="mt-2 text-sm text-slate-600 leading-7">
-                دعم متكامل للشركات الدوائية، الأجهزة الطبية، مستحضرات التجميل،
-                والأغذية.
+            {/* HERO FEATURE CARD */}
+            <div className="glass-card p-8 shadow-xl">
+              <p className="text-lg font-bold text-slate-800">دعم تنظيمي شامل</p>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                نغطي كافة القطاعات الحيوية لضمان استمرارية أعمالكم ونموها.
               </p>
 
-              <div className="mt-5 space-y-3">
+              <div className="mt-8 space-y-4">
                 {[
-                  "متطلبات متوافقة مع SFDA",
-                  "تبسيط وتسريع الإجراءات",
-                  "جاهزية تشغيلية وجودة",
-                ].map((x) => (
+                  "امتثال كامل لمتطلبات SFDA",
+                  "تقليل زمن التسجيل والاعتماد",
+                  "دعم فني وتشغيلي مستمر",
+                ].map((item) => (
                   <div
-                    key={x}
-                    className="flex items-center gap-3 rounded-xl border border-white/40 bg-white/60 backdrop-blur px-4 py-3 text-sm"
+                    key={item}
+                    className="flex items-center gap-4 rounded-2xl border border-white/60 bg-white/40 p-4 transition-transform hover:translate-x-[-5px]"
                   >
-                    <ShieldCheck className="h-4 w-4 text-sky-600" />
-                    <span className="text-slate-700">{x}</span>
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sky-100 text-sky-600">
+                      <ShieldCheck className="h-5 w-5" />
+                    </div>
+                    <span className="text-sm font-medium text-slate-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -144,114 +129,72 @@ export default function ArHomePage() {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="fade-up">
-            <h2 className="text-2xl font-semibold">من نحن</h2>
-            <p className="mt-4 text-slate-600 leading-7">
-              نقدم خدمات تنظيمية واستشارية دقيقة داخل المملكة العربية السعودية،
-              تساعد الشركات على التركيز على النمو مع ضمان الامتثال الكامل.
-            </p>
+      {/* SERVICES SECTION */}
+      <section className="mx-auto max-w-6xl px-4 py-20">
+        <div className="flex items-end justify-between mb-12">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900">خدماتنا التخصصية</h2>
+            <p className="mt-2 text-slate-500">نقدم حلولاً متكاملة مخصصة لكل قطاع</p>
           </div>
+          <Link href="/ar/services" className="hidden md:flex items-center gap-2 text-sky-600 font-semibold hover:underline">
+            عرض كافة الخدمات <ArrowLeft size={18} />
+          </Link>
+        </div>
 
-          <div className="glass-card glass-card-hover p-6 fade-up">
-            <p className="text-sm font-semibold">ماذا نقدم؟</p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-600 leading-7">
-              <li>• مسارات تنظيمية واضحة</li>
-              <li>• إعداد ملفات دقيقة ومتوافقة</li>
-              <li>• دعم تشغيلي وجودة</li>
-              <li>• تواصل سريع ومباشر</li>
-            </ul>
-          </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {services.map((service, index) => (
+            <div key={index} className="glass-card glass-card-hover p-8 group">
+              <div className="flex items-center gap-5 mb-6">
+                <div className="glass-icon text-sky-600 group-hover:scale-110 transition-transform">
+                  <service.icon size={26} />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800">{service.title}</h3>
+              </div>
+              <ul className="grid gap-3 mb-6">
+                {service.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3 text-slate-600 text-sm">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-sky-400 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/ar/services" className="text-sm font-bold text-sky-600 flex items-center gap-1 hover:gap-2 transition-all">
+                المزيد عن {service.title} <ArrowLeft size={16} />
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* VALUES */}
-      <section className="border-t border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <h2 className="text-2xl font-semibold fade-up">قيمنا</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* VALUES SECTION */}
+      <section className="bg-white/50 py-20 backdrop-blur-sm border-y border-white/40">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">القيم التي تحركنا</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 text-center">
             {values.map((v) => (
-              <div
-                key={v.title}
-                className="glass-card glass-card-hover p-4 fade-up"
-              >
-                <p className="font-medium">{v.title}</p>
-                <p className="mt-1 text-sm text-slate-600 leading-7">
-                  {v.text}
-                </p>
+              <div key={v.title} className="glass-card p-6 hover:shadow-lg transition-shadow">
+                <p className="font-bold text-sky-700 text-lg mb-2">{v.title}</p>
+                <p className="text-sm text-slate-600 leading-relaxed">{v.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SERVICES PREVIEW */}
-      <section className="border-t border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <div className="flex items-end justify-between gap-4">
-            <h2 className="text-2xl font-semibold">الخدمات</h2>
-            <Link
-              href="/ar/services"
-              className="text-sm font-medium text-slate-700 hover:underline"
-            >
-              عرض الكل
-            </Link>
-          </div>
-
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {services.map((s) => {
-              const Icon = s.icon;
-              return (
-                <div
-                  key={s.title}
-                  className="glass-card glass-card-hover p-6 fade-up"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="glass-icon mt-1">
-                      <Icon className="h-5 w-5 text-sky-700" />
-                    </div>
-
-                    <div>
-                      <p className="font-semibold">{s.title}</p>
-                      <ul className="mt-3 space-y-1 text-sm text-slate-600 leading-7">
-                        {s.items.map((item) => (
-                          <li key={item}>• {item}</li>
-                        ))}
-                      </ul>
-
-                      <Link
-                        href="/ar/services"
-                        className="mt-3 inline-block text-sm font-medium text-sky-700 hover:underline"
-                      >
-                        المزيد →
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <div className="glass-card p-10 text-center fade-up">
-            <h3 className="text-2xl font-semibold">
-              تحتاج مسار تنظيمي واضح؟
-            </h3>
-            <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 leading-7">
-              شاركنا تفاصيل شركتك وفئة المنتج، وسنقترح أفضل مسار تنظيمي لك.
+      {/* CTA SECTION */}
+      <section className="mx-auto max-w-6xl px-4 py-20">
+        <div className="glass-card bg-sky-600/5 border-sky-200/50 p-10 md:p-16 text-center relative overflow-hidden">
+          <div className="relative z-10">
+            <h3 className="text-3xl font-bold text-slate-900">هل تبحث عن استشارة تنظيمية؟</h3>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 leading-relaxed">
+              فريقنا جاهز لتحليل منتجاتكم واقتراح أفضل مسار لتسجيلها في الهيئة العامة للغذاء والدواء.
             </p>
-            <div className="mt-6">
+            <div className="mt-10">
               <Link
                 href="/ar/contact"
-                className="rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
+                className="inline-block rounded-xl bg-sky-600 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-sky-200 hover:bg-sky-700 transition-all transform hover:scale-105"
               >
-                تواصل معنا
+                تواصل معنا اليوم
               </Link>
             </div>
           </div>
