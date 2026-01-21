@@ -81,7 +81,7 @@ export default function EnHomePage() {
       <section className="border-b border-white/40">
         <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
           <div className="grid items-center gap-10 md:grid-cols-2">
-            <div className="fade-up">
+            <div>
               <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs text-slate-600">
                 Regulatory Affairs • Saudi Market
               </p>
@@ -97,11 +97,10 @@ export default function EnHomePage() {
               <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600">
                 With over <span className="font-semibold">13 years</span> of
                 experience in the Saudi market, we provide meticulous regulatory
-                and advisory services to ensure confident and compliant market
-                entry.
+                and advisory services.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex gap-3">
                 <Link
                   href="/en/contact"
                   className="rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
@@ -110,19 +109,19 @@ export default function EnHomePage() {
                 </Link>
                 <Link
                   href="/en/services"
-                  className="rounded-xl border border-white/40 bg-white/60 backdrop-blur px-5 py-3 text-sm font-medium hover:bg-white/70"
+                  className="rounded-xl border border-white/40 bg-white/60 backdrop-blur px-5 py-3 text-sm hover:bg-white/70"
                 >
                   Our Services
                 </Link>
               </div>
             </div>
 
-            {/* HERO GLASS */}
-            <div className="glass-card glass-card-hover p-6 fade-up">
+            {/* HERO CARD */}
+            <div className="glass-card p-6">
               <p className="text-sm font-semibold">Trusted Regulatory Support</p>
-              <p className="mt-2 text-sm text-slate-600 leading-7">
-                End-to-end compliance support for pharmaceuticals, medical
-                devices, cosmetics, and food products.
+              <p className="mt-2 text-sm text-slate-600">
+                End-to-end compliance for pharmaceuticals, medical devices,
+                cosmetics, and food products.
               </p>
 
               <div className="mt-5 space-y-3">
@@ -133,7 +132,7 @@ export default function EnHomePage() {
                 ].map((x) => (
                   <div
                     key={x}
-                    className="flex items-center gap-3 rounded-xl border border-white/40 bg-white/60 backdrop-blur px-4 py-3 text-sm"
+                    className="flex items-center gap-3 rounded-xl border border-white/40 bg-white/60 px-4 py-3 text-sm"
                   >
                     <ShieldCheck className="h-4 w-4 text-sky-600" />
                     <span>{x}</span>
@@ -146,115 +145,55 @@ export default function EnHomePage() {
       </section>
 
       {/* ABOUT */}
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="fade-up">
+          <div>
             <h2 className="text-2xl font-semibold">About Us</h2>
             <p className="mt-4 text-slate-600 leading-7">
-              Pharma Registration delivers precise regulatory and advisory
-              services tailored to your business needs—saving you time while
-              ensuring full regulatory compliance.
+              Pharma Registration provides regulatory and advisory services that
+              help companies achieve compliance while focusing on growth.
             </p>
           </div>
 
-          <div className="glass-card glass-card-hover p-6 fade-up">
+          <div className="glass-card p-6">
             <p className="text-sm font-semibold">What you can expect</p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-600 leading-7">
-              <li>• Clear SFDA-aligned regulatory pathways</li>
-              <li>• Accurate documentation preparation</li>
-              <li>• Practical compliance guidance</li>
-              <li>• Client-first communication</li>
+            <ul className="mt-4 space-y-2 text-sm text-slate-600">
+              <li>• Clear SFDA-aligned pathways</li>
+              <li>• Accurate documentation</li>
+              <li>• Practical compliance support</li>
+              <li>• Client-focused communication</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* MISSION & VISION (NO CARDS) */}
-      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+      {/* MISSION & VISION */}
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-10 md:grid-cols-2">
-          {/* Mission */}
-          <div className="flex gap-4 fade-up">
+          <div className="flex gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
               <Target className="h-6 w-6" />
             </div>
             <div>
               <h3 className="text-xl font-semibold">Mission</h3>
               <p className="mt-2 text-slate-600 leading-7">
-                Our mission at Pharma Registration is to provide high-quality
-                regulatory affairs consultations to pharmaceutical, cosmetical,
-                and medical device companies—enabling them to bring safe and
-                effective products to market efficiently while achieving
-                regulatory compliance and operational excellence.
+                Our mission is to provide high-quality regulatory consultations
+                enabling safe and effective products to reach the market.
               </p>
             </div>
           </div>
 
-          {/* Vision */}
-          <div className="flex gap-4 fade-up">
+          <div className="flex gap-4">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100 text-sky-700">
               <Eye className="h-6 w-6" />
             </div>
             <div>
               <h3 className="text-xl font-semibold">Vision</h3>
               <p className="mt-2 text-slate-600 leading-7">
-                At Pharma Registration, our vision is to be the preferred partner
-                for pharmaceutical and medical device companies seeking
-                regulatory expertise and guidance, while continuously expanding
-                our services and global reach.
+                To be the preferred regulatory partner for pharmaceutical and
+                medical device companies worldwide.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* VALUES */}
-      <section className="border-t border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <h2 className="text-2xl font-semibold fade-up">Our Values</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="glass-card glass-card-hover p-4 fade-up"
-              >
-                <p className="font-medium">{v.title}</p>
-                <p className="mt-1 text-sm text-slate-600 leading-7">
-                  {v.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section className="border-t border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-          <h2 className="text-2xl font-semibold">Services</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {services.map((s) => {
-              const Icon = s.icon;
-              return (
-                <div
-                  key={s.title}
-                  className="glass-card glass-card-hover p-6 fade-up"
-                >
-                  <div className="flex gap-4">
-                    <div className="glass-icon">
-                      <Icon className="h-5 w-5 text-sky-700" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">{s.title}</p>
-                      <ul className="mt-3 space-y-1 text-sm text-slate-600">
-                        {s.items.map((item) => (
-                          <li key={item}>• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
