@@ -41,7 +41,7 @@ export default function ContactPage() {
           <p className="text-sm font-semibold text-sky-700">CONTACT</p>
           <h2 className="mt-2 text-2xl font-semibold">Get In Touch With Us</h2>
           <p className="mt-3 text-sm leading-7 text-slate-600">
-            Share your company details and product category, and we’ll guide you through the best regulatory pathway.
+           We assist our clients in registering their products with the Saudi Food and Drug Authority efficiently and seamlessly, ensuring safe and fast market entry.
           </p>
 
           <form className="mt-6 grid gap-3">
