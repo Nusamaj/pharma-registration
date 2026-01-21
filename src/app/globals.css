@@ -24,3 +24,50 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root{
+  --brand-50: #f0f9ff;
+  --brand-100:#e0f2fe;
+  --brand-200:#bae6fd;
+  --brand-500:#0ea5e9;
+  --brand-600:#0284c7;
+  --ink:#0f172a;
+}
+
+/* خلفية متدرجة مثل المثال */
+.bg-med-gradient{
+  background: linear-gradient(180deg, var(--brand-50) 0%, #ffffff 70%);
+}
+
+/* كرت لطيف */
+.card-soft{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(2,132,199,0.12);
+  box-shadow: 0 10px 30px rgba(2,132,199,0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* أيقونة داخل دائرة */
+.icon-badge{
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: var(--brand-100);
+  border: 1px solid rgba(2,132,199,0.15);
+}
+
+/* حركة خفيفة بدون مكتبات */
+.fade-up{
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp .6s ease-out forwards;
+}
+.fade-up.delay-1{ animation-delay: .08s; }
+.fade-up.delay-2{ animation-delay: .16s; }
+.fade-up.delay-3{ animation-delay: .24s; }
+
+@keyframes fadeUp{
+  to{ opacity:1; transform: translateY(0); }
+}
