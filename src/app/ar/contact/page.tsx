@@ -120,7 +120,7 @@ export default function ContactArPage() {
             <div className="space-y-2">
               <p className="font-semibold text-sky-900">مساحة للصورة</p>
               <p className="text-sm text-slate-500">
-                يمكن وضع صورة الفريق أو خريطة الموقع هنا
+                يمكن وضع صورة
               </p>
             </div>
           </div>
