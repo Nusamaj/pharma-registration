@@ -98,28 +98,28 @@ const blogPosts: BlogPost[] = [
 export default function ArHomePage() {
   return (
     <main dir="rtl" className="min-h-screen text-slate-900">
-      {/* ================= HERO SECTION ================= */}
+      
       {/* ================= HERO SECTION ================= */}
 <section className="hero border-b border-white/40">
   <div className="hero-content mx-auto max-w-6xl px-4 py-16 md:py-28">
     <div className="grid items-center gap-12 md:grid-cols-2">
 
       {/* TEXT */}
-      <div className="fade-up text-white">
-        <p className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white">
+      <div className="fade-up">
+        <p className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-slate-700">
           الشؤون التنظيمية • السوق السعودي
         </p>
 
-        <h1 className="mt-4 text-4xl font-bold md:text-6xl">
+        <h1 className="mt-4 text-4xl font-bold md:text-6xl text-slate-900">
           Pharma Registration
         </h1>
 
-        <p className="mt-4 text-xl text-white/90">
+        <p className="mt-4 text-xl text-slate-700">
           نُمكّن شركات الرعاية الصحية بحلول تنظيمية احترافية
         </p>
 
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90">
-          بخبرة تتجاوز <span className="font-bold text-white">13 سنة</span> في
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-700">
+          بخبرة تتجاوز <span className="font-bold text-sky-700">13 سنة</span> في
           السوق السعودي، نقدّم خدمات تنظيمية واستشارية دقيقة تساعدك على دخول
           السوق بثقة وامتثال.
         </p>
@@ -127,14 +127,14 @@ export default function ArHomePage() {
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/ar/contact"
-            className="rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#00589F] hover:bg-white/90 transition-all"
+            className="rounded-xl bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-sky-700 transition-all"
           >
             تواصل معنا
           </Link>
 
           <Link
             href="/ar/services"
-            className="rounded-xl border border-white/60 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-all"
+            className="rounded-xl bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 hover:bg-white/90 transition-all"
           >
             خدماتنا
           </Link>
@@ -142,7 +142,7 @@ export default function ArHomePage() {
       </div>
 
       {/* CARD */}
-      <div className="glass-card p-8 shadow-xl fade-up delay-1 bg-white/90">
+      <div className="glass-card p-8 shadow-xl fade-up delay-1 bg-white/80">
         <p className="text-lg font-bold text-slate-900">
           دعم تنظيمي موثوق
         </p>
@@ -152,7 +152,7 @@ export default function ArHomePage() {
             (x) => (
               <div
                 key={x}
-                className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-4 transition-all hover:-translate-x-2"
+                className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/60 p-4 transition-all hover:-translate-x-2"
               >
                 <ShieldCheck className="h-5 w-5 text-sky-600" />
                 <span className="text-sm font-medium text-slate-700">
@@ -167,6 +167,7 @@ export default function ArHomePage() {
     </div>
   </div>
 </section>
+
 
 
       {/* ================= SERVICES SECTION ================= */}
