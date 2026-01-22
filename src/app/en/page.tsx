@@ -313,8 +313,7 @@ export default function EnHomePage() {
       </Link>
     </div>
   </div>
-</section>
-
-    </main>
+  </section>
+</main>
   );
 }
