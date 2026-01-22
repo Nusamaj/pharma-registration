@@ -60,16 +60,7 @@ export default function ContactPage() {
           </form>
         </div>
 
-        <div className="rounded-3xl border border-sky-100 bg-white/80 p-8 shadow-sm">
-          <div className="h-full min-h-[340px] rounded-2xl bg-gradient-to-br from-sky-100 via-white to-white p-6">
-            <p className="text-sm font-semibold"> picture </p>
-            <p className="mt-2 text-sm text-slate-600">
-              image
-            </p>
-            <div className="mt-6 h-56 rounded-2xl bg-white/70" />
-          </div>
-        </div>
-      </section>
+       </section>
     </main>
   );
 }
