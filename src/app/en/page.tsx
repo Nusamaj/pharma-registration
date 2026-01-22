@@ -106,28 +106,29 @@ export default function EnHomePage() {
   return (
     <main className="min-h-screen text-slate-900">
       {/* ================= HERO SECTION ================= */}
-      {/* ================= HERO SECTION ================= */}
+      
+{/* ================= HERO SECTION ================= */}
 <section className="hero border-b border-white/40">
   <div className="hero-content mx-auto max-w-6xl px-4 py-16 md:py-28">
     <div className="grid items-center gap-12 md:grid-cols-2">
 
       {/* LEFT */}
-      <div className="fade-up text-white">
-        <p className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white">
+      <div className="fade-up">
+        <p className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-slate-700">
           Regulatory Affairs • Saudi Market
         </p>
 
-        <h1 className="mt-4 text-4xl font-bold md:text-6xl">
+        <h1 className="mt-4 text-4xl font-bold md:text-6xl text-slate-900">
           Pharma Registration
         </h1>
 
-        <p className="mt-4 text-xl text-white/90">
+        <p className="mt-4 text-xl text-slate-700">
           Empowering Healthcare Companies with Regulatory Excellence
         </p>
 
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90">
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-700">
           With over{" "}
-          <span className="font-bold text-white">13 years</span> of
+          <span className="font-bold text-sky-700">13 years</span> of
           experience in the Saudi market, we provide meticulous regulatory
           and advisory services.
         </p>
@@ -135,14 +136,14 @@ export default function EnHomePage() {
         <div className="mt-10 flex gap-4">
           <Link
             href="/en/contact"
-            className="rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#00589F] hover:bg-white/90 transition-all"
+            className="rounded-xl bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-sky-700 transition-all"
           >
             Contact Us
           </Link>
 
           <Link
             href="/en/services"
-            className="rounded-xl border border-white/60 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-all"
+            className="rounded-xl bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 hover:bg-white/90 transition-all"
           >
             Our Services
           </Link>
@@ -150,7 +151,7 @@ export default function EnHomePage() {
       </div>
 
       {/* RIGHT CARD */}
-      <div className="glass-card p-8 shadow-xl fade-up delay-1 bg-white/90">
+      <div className="glass-card p-8 shadow-xl fade-up delay-1 bg-white/80">
         <p className="text-lg font-bold text-slate-900">
           Trusted Regulatory Support
         </p>
@@ -163,7 +164,7 @@ export default function EnHomePage() {
           ].map((x) => (
             <div
               key={x}
-              className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-4 transition-all hover:translate-x-2"
+              className="flex items-center gap-3 rounded-2xl border border-white/70 bg-white/60 p-4 transition-all hover:translate-x-2"
             >
               <ShieldCheck className="h-5 w-5 text-sky-600" />
               <span className="text-sm font-medium text-slate-700">
@@ -177,6 +178,7 @@ export default function EnHomePage() {
     </div>
   </div>
 </section>
+
 
       {/* ================= SERVICES ================= */}
       <section className="mx-auto max-w-6xl px-4 py-20">
@@ -236,6 +238,83 @@ export default function EnHomePage() {
           </div>
         </div>
       </section>
+
+      {/* ================= BLOG SECTION ================= */}
+<section className="mx-auto max-w-6xl px-4 py-20">
+  <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+    <div className="fade-up">
+      <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700">
+        <FileText className="h-4 w-4" />
+        Blog
+      </p>
+      <h2 className="mt-4 text-3xl font-bold">Latest Articles</h2>
+      <p className="mt-2 max-w-2xl text-slate-600 leading-7">
+        Practical articles covering SFDA, compliance, GDP, labeling, and
+        documentation—tailored for pharmaceuticals, medical devices, cosmetics,
+        and supplements.
+      </p>
+    </div>
+
+    <div className="fade-up">
+      <Link
+        href="/en/blog"
+        className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-sky-700 transition-all"
+      >
+        View All Articles <ArrowRight className="h-4 w-4" />
+      </Link>
+    </div>
+  </div>
+
+  <div className="mt-10 grid gap-6 md:grid-cols-3">
+    {blogPosts.map((post, index) => (
+      <article
+        key={post.slug}
+        className="glass-card glass-card-hover p-6 fade-up"
+        style={{ animationDelay: `${index * 0.1}s` }}
+      >
+        <div className="flex items-center justify-between text-xs text-slate-500">
+          <span className="rounded-full bg-sky-100 px-3 py-1 text-slate-700">
+            {post.category}
+          </span>
+          <span>{post.date}</span>
+        </div>
+
+        <h3 className="mt-4 text-lg font-bold leading-snug">
+          {post.title}
+        </h3>
+        <p className="mt-3 text-sm text-slate-600 leading-7">
+          {post.excerpt}
+        </p>
+
+        <div className="mt-6">
+          <Link
+            href={`/en/blog/${post.slug}`}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:underline"
+          >
+            Read more <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div className="mt-12 rounded-3xl bg-sky-100/60 p-8 text-center">
+    <h3 className="text-xl font-bold">Need help with your documentation?</h3>
+    <p className="mt-2 text-sm text-slate-600 leading-7">
+      Share your product category and current status—we’ll help you define a
+      clear and compliant path forward.
+    </p>
+    <div className="mt-5">
+      <Link
+        href="/en/contact"
+        className="rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
+      >
+        Contact Us
+      </Link>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }
