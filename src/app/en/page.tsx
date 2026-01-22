@@ -106,68 +106,77 @@ export default function EnHomePage() {
   return (
     <main className="min-h-screen text-slate-900">
       {/* ================= HERO SECTION ================= */}
-      <section className="hero border-b border-white/40">
-        <div className="hero-content mx-auto max-w-6xl px-4 py-14 md:py-24">
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            {/* LEFT */}
-            <div className="fade-up">
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700">
-                Regulatory Affairs • Saudi Market
-              </p>
+      {/* ================= HERO SECTION ================= */}
+<section className="hero border-b border-white/40">
+  <div className="hero-content mx-auto max-w-6xl px-4 py-16 md:py-28">
+    <div className="grid items-center gap-12 md:grid-cols-2">
 
-              <h1 className="mt-4 text-4xl font-bold md:text-6xl">
-                Pharma Registration
-              </h1>
+      {/* LEFT */}
+      <div className="fade-up text-white">
+        <p className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white">
+          Regulatory Affairs • Saudi Market
+        </p>
 
-              <p className="mt-4 text-xl text-slate-600">
-                Empowering Healthcare Companies with Regulatory Excellence
-              </p>
+        <h1 className="mt-4 text-4xl font-bold md:text-6xl">
+          Pharma Registration
+        </h1>
 
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600">
-                With over{" "}
-                <span className="font-bold text-sky-600">13 years</span> of
-                experience in the Saudi market, we provide meticulous regulatory
-                and advisory services.
-              </p>
+        <p className="mt-4 text-xl text-white/90">
+          Empowering Healthcare Companies with Regulatory Excellence
+        </p>
 
-              <div className="mt-10 flex gap-4">
-                <Link
-                  href="/en/contact"
-                  className="rounded-xl bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-sky-700 transition-all"
-                >
-                  Contact Us
-                </Link>
-                <Link
-                  href="/en/services"
-                  className="glass-card px-6 py-3.5 text-sm font-semibold hover:bg-white/80 transition-all"
-                >
-                  Our Services
-                </Link>
-              </div>
-            </div>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-white/90">
+          With over{" "}
+          <span className="font-bold text-white">13 years</span> of
+          experience in the Saudi market, we provide meticulous regulatory
+          and advisory services.
+        </p>
 
-            {/* RIGHT CARD */}
-            <div className="glass-card p-8 shadow-xl fade-up delay-1">
-              <p className="text-lg font-bold">Trusted Regulatory Support</p>
-              <div className="mt-6 space-y-4">
-                {[
-                  "SFDA-aligned documentation",
-                  "Process streamlining",
-                  "Operational readiness",
-                ].map((x) => (
-                  <div
-                    key={x}
-                    className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/40 p-4 transition-all hover:translate-x-2"
-                  >
-                    <ShieldCheck className="h-5 w-5 text-sky-600" />
-                    <span className="text-sm font-medium">{x}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="mt-10 flex gap-4">
+          <Link
+            href="/en/contact"
+            className="rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-[#00589F] hover:bg-white/90 transition-all"
+          >
+            Contact Us
+          </Link>
+
+          <Link
+            href="/en/services"
+            className="rounded-xl border border-white/60 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-all"
+          >
+            Our Services
+          </Link>
         </div>
-      </section>
+      </div>
+
+      {/* RIGHT CARD */}
+      <div className="glass-card p-8 shadow-xl fade-up delay-1 bg-white/90">
+        <p className="text-lg font-bold text-slate-900">
+          Trusted Regulatory Support
+        </p>
+
+        <div className="mt-6 space-y-4">
+          {[
+            "SFDA-aligned documentation",
+            "Process streamlining",
+            "Operational readiness",
+          ].map((x) => (
+            <div
+              key={x}
+              className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-4 transition-all hover:translate-x-2"
+            >
+              <ShieldCheck className="h-5 w-5 text-sky-600" />
+              <span className="text-sm font-medium text-slate-700">
+                {x}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ================= SERVICES ================= */}
       <section className="mx-auto max-w-6xl px-4 py-20">
