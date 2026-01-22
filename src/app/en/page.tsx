@@ -12,7 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-// 1. تعريف أنواع البيانات لـ TypeScript لمنع خطأ الـ Build
+// 1. Types
 interface ServiceItem {
   title: string;
   icon: LucideIcon;
@@ -32,7 +32,7 @@ interface BlogPost {
   excerpt: string;
 }
 
-// 2. البيانات
+// 2. Data
 const services: ServiceItem[] = [
   {
     title: "Pharmaceutical",
@@ -75,30 +75,6 @@ const services: ServiceItem[] = [
   },
 ];
 
-const values: ValueItem[] = [
-  {
-    title: "Excellence",
-    text: "Delivering regulatory services with the highest standards of quality and accuracy.",
-  },
-  {
-    title: "Integrity",
-    text: "Honesty, transparency, and ethical conduct in every engagement.",
-  },
-  {
-    title: "Collaboration",
-    text: "Strong partnerships with clients and regulatory authorities.",
-  },
-  {
-    title: "Innovation",
-    text: "Staying ahead of regulatory changes with practical, innovative solutions.",
-  },
-  {
-    title: "Client Focus",
-    text: "Personalized guidance and end-to-end support tailored to your needs.",
-  },
-];
-
-// Blog preview (same slugs as your blog pages)
 const blogPosts: BlogPost[] = [
   {
     slug: "sfda-registration-overview",
@@ -128,17 +104,18 @@ const blogPosts: BlogPost[] = [
 
 export default function EnHomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-blue-50 text-slate-900">
-      {/* HERO SECTION */}
-      <section className="border-b border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-24">
+    <main className="min-h-screen text-slate-900">
+      {/* ================= HERO SECTION ================= */}
+      <section className="hero border-b border-white/40">
+        <div className="hero-content mx-auto max-w-6xl px-4 py-14 md:py-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
+            {/* LEFT */}
             <div className="fade-up">
               <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700">
                 Regulatory Affairs • Saudi Market
               </p>
 
-              <h1 className="mt-4 text-4xl font-bold md:text-6xl text-slate-900">
+              <h1 className="mt-4 text-4xl font-bold md:text-6xl">
                 Pharma Registration
               </h1>
 
@@ -147,7 +124,8 @@ export default function EnHomePage() {
               </p>
 
               <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600">
-                With over <span className="font-bold text-sky-600">13 years</span> of
+                With over{" "}
+                <span className="font-bold text-sky-600">13 years</span> of
                 experience in the Saudi market, we provide meticulous regulatory
                 and advisory services.
               </p>
@@ -168,30 +146,34 @@ export default function EnHomePage() {
               </div>
             </div>
 
-            {/* HERO CARD */}
+            {/* RIGHT CARD */}
             <div className="glass-card p-8 shadow-xl fade-up delay-1">
               <p className="text-lg font-bold">Trusted Regulatory Support</p>
               <div className="mt-6 space-y-4">
-                {["SFDA-aligned documentation", "Process streamlining", "Operational readiness"].map(
-                  (x) => (
-                    <div
-                      key={x}
-                      className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/40 p-4 transition-all hover:translate-x-2"
-                    >
-                      <ShieldCheck className="h-5 w-5 text-sky-600" />
-                      <span className="text-sm font-medium">{x}</span>
-                    </div>
-                  )
-                )}
+                {[
+                  "SFDA-aligned documentation",
+                  "Process streamlining",
+                  "Operational readiness",
+                ].map((x) => (
+                  <div
+                    key={x}
+                    className="flex items-center gap-3 rounded-2xl border border-white/60 bg-white/40 p-4 transition-all hover:translate-x-2"
+                  >
+                    <ShieldCheck className="h-5 w-5 text-sky-600" />
+                    <span className="text-sm font-medium">{x}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* ================= SERVICES ================= */}
       <section className="mx-auto max-w-6xl px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-12 fade-up">Our Core Services</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 fade-up">
+          Our Core Services
+        </h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <div
@@ -215,7 +197,7 @@ export default function EnHomePage() {
         </div>
       </section>
 
-      {/* MISSION & VISION */}
+      {/* ================= MISSION & VISION ================= */}
       <section className="bg-white/50 py-20 border-y border-white/40 backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-4 grid gap-10 md:grid-cols-2">
           <div className="flex gap-6 fade-up">
@@ -225,7 +207,8 @@ export default function EnHomePage() {
             <div>
               <h3 className="text-xl font-bold">Mission</h3>
               <p className="mt-2 text-slate-600 leading-relaxed">
-                Providing high-quality consultations enabling safe products to reach the market.
+                Providing high-quality consultations enabling safe products to
+                reach the market.
               </p>
             </div>
           </div>
@@ -237,80 +220,10 @@ export default function EnHomePage() {
             <div>
               <h3 className="text-xl font-bold">Vision</h3>
               <p className="mt-2 text-slate-600 leading-relaxed">
-                To be the preferred global regulatory partner for healthcare industries.
+                To be the preferred global regulatory partner for healthcare
+                industries.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* BLOG SECTION (NEW) */}
-      <section className="mx-auto max-w-6xl px-4 py-20">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <div className="fade-up">
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700">
-              <FileText className="h-4 w-4" />
-              Blog
-            </p>
-            <h2 className="mt-4 text-3xl font-bold">Latest Insights</h2>
-            <p className="mt-2 max-w-2xl text-slate-600 leading-7">
-              Practical articles on SFDA, compliance, GDP, labeling, and documentation—written for
-              pharma, medical devices, cosmetics, and supplements.
-            </p>
-          </div>
-
-          <div className="fade-up">
-            <Link
-              href="/en/blog"
-              className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-sky-700 transition-all"
-            >
-              View all posts <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {blogPosts.map((post, index) => (
-            <article
-              key={post.slug}
-              className="glass-card glass-card-hover p-6 fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex items-center justify-between text-xs text-slate-500">
-                <span className="rounded-full bg-sky-100 px-3 py-1 text-slate-700">
-                  {post.category}
-                </span>
-                <span>{post.date}</span>
-              </div>
-
-              <h3 className="mt-4 text-lg font-bold leading-snug">{post.title}</h3>
-              <p className="mt-3 text-sm text-slate-600 leading-7">{post.excerpt}</p>
-
-              <div className="mt-6">
-                <Link
-                  href={`/en/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:underline"
-                >
-                  Read more <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-12 rounded-3xl bg-sky-100/60 p-8 text-center">
-          <h3 className="text-xl font-bold">Need regulatory guidance?</h3>
-          <p className="mt-2 text-sm text-slate-600 leading-7">
-            Share your product category and current status—we’ll help you plan the fastest compliant
-            path.
-          </p>
-          <div className="mt-5">
-            <Link
-              href="/en/contact"
-              className="rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700"
-            >
-              Contact Us
-            </Link>
           </div>
         </div>
       </section>

@@ -78,3 +78,56 @@ body {
     @apply flex h-11 w-11 items-center justify-center rounded-full bg-white/60 backdrop-blur border border-white/40 shadow-sm;
   }
 }
+
+/* ===== HERO BACKGROUND ===== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+
+/* صورة الخلفية */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.18; /* ناعمة ومناسبة لألوانك */
+  z-index: 0;
+}
+
+/* طبقة بيضاء للقراءة */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.88) 45%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* محتوى الهيرو */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+/* RTL: اعكس اتجاه التدرّج للعربي */
+.hero-rtl::after {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.88) 45%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+}

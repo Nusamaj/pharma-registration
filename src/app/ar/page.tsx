@@ -97,20 +97,17 @@ const blogPosts: BlogPost[] = [
 
 export default function ArHomePage() {
   return (
-    <main
-      dir="rtl"
-      className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-blue-50 text-slate-900"
-    >
-      {/* HERO SECTION */}
-      <section className="border-b border-white/40">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-24">
+    <main dir="rtl" className="min-h-screen text-slate-900">
+      {/* ================= HERO SECTION ================= */}
+      <section className="hero hero-rtl border-b border-white/40">
+        <div className="hero-content mx-auto max-w-6xl px-4 py-14 md:py-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="fade-up">
               <p className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/60 backdrop-blur px-3 py-1 text-xs font-medium text-sky-700">
                 الشؤون التنظيمية • السوق السعودي
               </p>
 
-              <h1 className="mt-4 text-4xl font-bold md:text-6xl text-slate-900">
+              <h1 className="mt-4 text-4xl font-bold md:text-6xl">
                 Pharma Registration
               </h1>
 
@@ -162,7 +159,7 @@ export default function ArHomePage() {
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* ================= SERVICES SECTION ================= */}
       <section className="mx-auto max-w-6xl px-4 py-20">
         <h2 className="text-3xl font-bold text-center mb-12 fade-up">
           خدماتنا الأساسية
@@ -190,7 +187,7 @@ export default function ArHomePage() {
         </div>
       </section>
 
-      {/* MISSION & VISION */}
+      {/* ================= MISSION & VISION ================= */}
       <section className="bg-white/50 py-20 border-y border-white/40 backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-4 grid gap-10 md:grid-cols-2">
           <div className="flex gap-6 fade-up">
@@ -221,7 +218,7 @@ export default function ArHomePage() {
         </div>
       </section>
 
-      {/* BLOG SECTION (NEW) */}
+      {/* ================= BLOG SECTION ================= */}
       <section className="mx-auto max-w-6xl px-4 py-20">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
           <div className="fade-up">
