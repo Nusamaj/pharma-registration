@@ -32,11 +32,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* --- تخصيصات إضافية (Custom Utilities) --- */
-.bg-med-gradient {
-  background: linear-gradient(180deg, var(--brand-50) 0%, #ffffff 70%);
-}
-
 .card-soft {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(2, 132, 199, 0.12);
