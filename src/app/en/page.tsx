@@ -105,7 +105,7 @@ const blogPosts: BlogPost[] = [
 export default function EnHomePage() {
   return (
     <main className="min-h-screen text-slate-900">
-      {/* ================= HERO SECTION ================= */}
+
       
 {/* ================= HERO SECTION ================= */}
 <section className="hero hero-en border-b border-white/40">
