@@ -103,7 +103,7 @@ export default function ArHomePage() {
     <main className="min-h-screen text-slate-900" dir="rtl">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="hero border-b border-white/40">
+      <section className="hero hero-ar border-b border-white/40">
         <div className="hero-content mx-auto max-w-6xl px-4 py-16 md:py-28">
           <div className="grid items-center gap-12 md:grid-cols-2">
 
