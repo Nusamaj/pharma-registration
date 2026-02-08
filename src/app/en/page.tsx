@@ -158,9 +158,9 @@ export default function EnHomePage() {
 
         <div className="mt-6 space-y-4">
           {[
-            "SFDA-aligned documentation",
-            "Process streamlining",
-            "Operational readiness",
+            "Establishment Licensing",
+            "Logistics Services",
+            "Product Registration with the Food and Drug Authority",
           ].map((x) => (
             <div
               key={x}

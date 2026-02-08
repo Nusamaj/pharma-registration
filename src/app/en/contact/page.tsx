@@ -2,8 +2,8 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
   const cards = [
-    { icon: Mail, title: "Email Address", lines: ["baraa@pharmaregistration.com"] },
-    { icon: Phone, title: "Phone Number", lines: ["(Optional) Add phone here"] },
+    { icon: Mail, title: "Email Address", lines: ["bmajan@pharmaregistration.com"] },
+    { icon: Phone, title: "Phone Number", lines: ["+966 55 280 1987"] },
     { icon: MapPin, title: "Office Location", lines: ["Saudi Arabia"] },
     { icon: Clock, title: "Work Day", lines: ["Sun - Thu: 9:00 - 17:00"] },
   ];

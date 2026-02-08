@@ -6,12 +6,12 @@ export default function ContactArPage() {
     {
       icon: Mail,
       title: "البريد الإلكتروني",
-      lines: ["baraa@pharmaregistration.com"],
+      lines: ["bmajan@pharmaregistration.com"],
     },
     {
       icon: Phone,
       title: "رقم الهاتف",
-      lines: ["—"],
+      lines: ["+966 55 280 1987"],
     },
     {
       icon: MapPin,
@@ -112,18 +112,6 @@ export default function ContactArPage() {
               إرسال الرسالة
             </button>
           </form>
-        </div>
-
-        {/* مكان الصورة */}
-        <div className="flex items-center justify-center rounded-3xl border border-slate-100 bg-slate-50 p-8 text-center">
-          <div className="flex h-full min-h-[300px] w-full items-center justify-center rounded-2xl border-2 border-dashed border-sky-200 bg-gradient-to-br from-sky-100 to-white p-6">
-            <div className="space-y-2">
-              <p className="font-semibold text-sky-900">مساحة للصورة</p>
-              <p className="text-sm text-slate-500">
-                يمكن وضع صورة
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
