@@ -53,6 +53,68 @@ const data = [
   },
 ];
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "خدمات الشؤون التنظيمية وتسجيل المنتجات لدى هيئة الغذاء والدواء السعودية",
+  description:
+    "نقدّم خدمات متكاملة في الشؤون التنظيمية وتسجيل الأدوية، الأجهزة الطبية، مستحضرات التجميل، والأغذية والمكملات الغذائية لدى هيئة الغذاء والدواء السعودية (SFDA)، مع دعم شامل في الترخيص والامتثال والجودة.",
+
+  keywords: [
+    "خدمات الشؤون التنظيمية",
+    "تسجيل المنتجات لدى هيئة الغذاء والدواء",
+    "تسجيل الأدوية في السعودية",
+    "تسجيل الأجهزة الطبية",
+    "تسجيل مستحضرات التجميل",
+    "تسجيل الأغذية والمكملات الغذائية",
+    "تسجيل المنتجات الصحية",
+    "استشارات تنظيمية",
+    "ترخيص شركات الأدوية",
+    "ترخيص شركات الأجهزة الطبية",
+    "ممارسات التوزيع الجيد GDP",
+    "نظام التتبع الدوائي RSD",
+    "تجهيز المستودعات الطبية",
+    "الامتثال لمتطلبات SFDA",
+  ],
+
+  alternates: {
+    canonical: "https://www.pharmaregistration.com/ar/services",
+    languages: {
+      ar: "https://www.pharmaregistration.com/ar/services",
+      en: "https://www.pharmaregistration.com/en/services",
+    },
+  },
+
+  openGraph: {
+    title:
+      "خدمات الشؤون التنظيمية وتسجيل المنتجات الصحية | Pharma Registration",
+    description:
+      "خدمات احترافية في الشؤون التنظيمية وتسجيل المنتجات الصحية لدى هيئة الغذاء والدواء السعودية (SFDA).",
+    url: "https://www.pharmaregistration.com/ar/services",
+    siteName: "Pharma Registration",
+    locale: "ar_SA",
+    type: "website",
+    images: [
+      {
+        url: "https://www.pharmaregistration.com/images/hero-ar.png",
+        width: 1200,
+        height: 630,
+        alt: "خدمات الشؤون التنظيمية وتسجيل المنتجات لدى هيئة الغذاء والدواء السعودية",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "خدمات الشؤون التنظيمية وتسجيل المنتجات الصحية",
+    description:
+      "دعم تنظيمي شامل لتسجيل الأدوية والأجهزة الطبية ومستحضرات التجميل والأغذية في السعودية.",
+    images: ["https://www.pharmaregistration.com/images/hero-ar.png"],
+  },
+};
+
 export default function ArServicesPage() {
   return (
     <main dir="rtl" className="mx-auto max-w-6xl px-4 py-12 md:py-16 text-right">
