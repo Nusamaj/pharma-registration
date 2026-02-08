@@ -1,34 +1,63 @@
+import React from "react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
-export default function ContactPage() {
+export default function ContactEnPage() {
   const cards = [
-    { icon: Mail, title: "Email Address", lines: ["bmajan@pharmaregistration.com"] },
-    { icon: Phone, title: "Phone Number", lines: ["+966 55 280 1987"] },
-    { icon: MapPin, title: "Office Location", lines: ["Saudi Arabia"] },
-    { icon: Clock, title: "Work Day", lines: ["Sun - Thu: 9:00 - 17:00"] },
+    {
+      icon: Mail,
+      title: "Email Address",
+      lines: ["bmajan@pharmaregistration.com"],
+    },
+    {
+      icon: Phone,
+      title: "Phone Number",
+      lines: ["+966 55 280 1987"],
+    },
+    {
+      icon: MapPin,
+      title: "Location",
+      lines: ["Saudi Arabia"],
+    },
+    {
+      icon: Clock,
+      title: "Working Hours",
+      lines: ["Sunday – Thursday: 9:00 – 17:00"],
+    },
   ];
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+    <main dir="ltr" className="mx-auto max-w-6xl px-4 py-12 text-left">
+      {/* Header */}
       <section className="text-center">
-        <h1 className="text-3xl font-semibold md:text-4xl">Contact Us</h1>
-        <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-          Reach out for regulatory support and documentation guidance. We’ll respond as soon as possible.
+        <h1 className="text-3xl md:text-4xl font-semibold text-slate-900">
+          Contact Us
+        </h1>
+        <p className="mt-3 mx-auto max-w-2xl text-slate-600 leading-7">
+          Share the details of the product you would like to register, and we
+          will advise you on the most suitable registration pathway, including
+          requirements and estimated costs. We will get back to you as soon as
+          possible.
         </p>
       </section>
 
+      {/* Info Cards */}
       <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {cards.map((c) => {
-          const Icon = c.icon;
+        {cards.map((item, idx) => {
+          const Icon = item.icon;
           return (
-            <div key={c.title} className="rounded-3xl border border-sky-100 bg-white/80 p-6 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-100">
+            <div
+              key={idx}
+              className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+            >
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50">
                 <Icon className="h-5 w-5 text-sky-700" />
               </div>
-              <p className="mt-4 font-semibold">{c.title}</p>
-              <div className="mt-2 space-y-1 text-sm text-slate-600">
-                {c.lines.map((l) => (
-                  <p key={l}>{l}</p>
+              <p className="mt-4 font-semibold text-slate-900">
+                {item.title}
+              </p>
+              <div className="mt-2 space-y-1 text-sm text-slate-600 leading-7">
+                {item.lines.map((line, i) => (
+                  <p key={i}>{line}</p>
                 ))}
               </div>
             </div>
@@ -36,31 +65,27 @@ export default function ContactPage() {
         })}
       </section>
 
-      <section className="mt-10 grid gap-6 lg:grid-cols-2">
-        <div className="rounded-3xl border border-sky-100 bg-white/80 p-8 shadow-sm">
-          <p className="text-sm font-semibold text-sky-700">CONTACT</p>
-          <h2 className="mt-2 text-2xl font-semibold">Get In Touch With Us</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-600">
-           We assist our clients in registering their products with the Saudi Food and Drug Authority efficiently and seamlessly, ensuring safe and fast market entry.
+      {/* CTA */}
+      <section className="mt-12">
+        <div className="rounded-3xl bg-sky-900 p-10 text-center text-white">
+          <h3 className="text-2xl font-semibold italic">
+            Let’s Work Together
+          </h3>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-sky-100/80">
+            We support our clients in registering their products with the Saudi
+            Food and Drug Authority efficiently and smoothly, ensuring safe and
+            timely market entry.
           </p>
-
-          <form className="mt-6 grid gap-3">
-            <div className="grid gap-3 sm:grid-cols-2">
-              <input className="rounded-xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-sky-300" placeholder="Name" />
-              <input className="rounded-xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-sky-300" placeholder="Email" />
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <input className="rounded-xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-sky-300" placeholder="Phone" />
-              <input className="rounded-xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-sky-300" placeholder="Subject" />
-            </div>
-            <textarea className="min-h-[120px] rounded-xl border border-sky-100 bg-white px-4 py-3 text-sm outline-none focus:border-sky-300" placeholder="Message" />
-            <button className="mt-2 rounded-xl bg-sky-600 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-700" type="button">
-              Send Message
-            </button>
-          </form>
+          <div className="mt-8">
+            <a
+              href="mailto:bmajan@pharmaregistration.com"
+              className="inline-block rounded-xl bg-white px-8 py-3 text-sm font-bold text-sky-900 transition hover:bg-sky-50"
+            >
+              Start Your Consultation
+            </a>
+          </div>
         </div>
-
-       </section>
+      </section>
     </main>
   );
 }
