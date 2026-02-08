@@ -108,7 +108,7 @@ export default function EnHomePage() {
 
       
 {/* ================= HERO SECTION ================= */}
-<section className="hero hero-en border-b border-white/40">
+<section className="hero hero-en min-h-screen border-b border-white/40">
   <div className="hero-content mx-auto max-w-6xl px-4 py-16 md:py-28">
     <div className="grid items-center gap-12 md:grid-cols-2">
 
