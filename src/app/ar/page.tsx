@@ -97,7 +97,17 @@ const blogPosts: BlogPost[] = [
 
 export default function ArHomePage() {
   return (
+  <main dir="rtl" className="min-h-screen text-slate-900">
+    
     <ul className="text-sm text-slate-500 space-y-2">
+      {service.items.map((item, i) => (
+        <li key={i} className="flex gap-2">
+          <span>•</span>
+          {item}
+        </li>
+      ))}
+    </ul>
+
       
       {/* ================= HERO SECTION ================= */}
 <section className="hero border-b border-white/40">
