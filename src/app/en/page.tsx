@@ -196,7 +196,7 @@ export default function EnHomePage() {
                 <service.icon size={22} />
               </div>
               <h3 className="font-bold text-lg mb-3">{service.title}</h3>
-              <ul className="text-xs text-slate-500 space-y-2">
+              <ul className="text-base text-slate-500 space-y-2">
                 {service.items.map((item, i) => (
                   <li key={i} className="flex gap-2">
                     <span>•</span> {item}
