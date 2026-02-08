@@ -132,11 +132,12 @@ export default function ArHomePage() {
                   تواصل معنا
                 </Link>
                 <Link
-                  href="/ar/services"
-                  className="rounded-xl bg-white/70 px-6 py-3.5 text-sm font-semibold"
-                >
-                  خدماتنا
-                </Link>
+  href="/ar/services"
+  className="rounded-xl bg-white/70 px-6 py-3.5 text-sm font-semibold text-slate-800 hover:bg-white/90 transition-all"
+>
+  خدماتنا
+</Link>
+
               </div>
             </div>
 
