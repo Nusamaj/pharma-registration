@@ -20,7 +20,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen text-slate-900">
+     <body className="min-h-screen text-slate-900">
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Pharma Registration",
+        url: "https://www.pharmaregistration.com",
+        logo: "https://www.pharmaregistration.com/logo.png",
+        description:
+          "Professional regulatory affairs and pharmaceutical registration services in Saudi Arabia.",
+        inLanguage: ["en", "ar"],
+        sameAs: [],
+      }),
+    }}
+  />
         <Header />
         {children}
         <Footer />
