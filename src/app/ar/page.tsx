@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Pill,
   Stethoscope,
@@ -96,7 +97,43 @@ const blogPosts: BlogPost[] = [
       "قائمة سريعة لمراجعة الادعاءات، ترتيب المكونات، ومتطلبات الملصقات ثنائية اللغة قبل الطباعة.",
   },
 ];
+export const metadata: Metadata = {
+  title: "تسجيل المستحضرات الدوائية في السعودية | Pharma Registration",
+  description:
+    "نقدم خدمات احترافية لتسجيل المستحضرات الدوائية والأجهزة الطبية ومستحضرات التجميل والمكملات الغذائية لدى الهيئة العامة للغذاء والدواء السعودية (SFDA)، بالإضافة إلى الاستشارات التنظيمية وترخيص الشركات.",
+  keywords: [
+    // عربي
+    "تسجيل الأدوية",
+    "تسجيل المستحضرات الدوائية",
+    "تسجيل المنتجات الدوائية",
+    "تسجيل الأجهزة الطبية",
+    "تسجيل مستحضرات التجميل",
+    "تسجيل المكملات الغذائية",
+    "تسجيل الأغذية",
+    "الهيئة العامة للغذاء والدواء",
+    "هيئة الغذاء والدواء",
+    "SFDA",
+    "تسجيل دوائي",
+    "التسجيل الدوائي في السعودية",
+    "تسجيل المنتجات في السعودية",
+    "استشارات تنظيمية",
+    "الخدمات التنظيمية",
+    "الامتثال التنظيمي",
+    "ترخيص الشركات الدوائية",
+    "ترخيص شركات الأجهزة الطبية",
+    "ترخيص شركات مستحضرات التجميل",
+    "شؤون تنظيمية",
 
+    // English
+    "Pharma Registration",
+    "SFDA Registration",
+    "Drug Registration Saudi Arabia",
+    "Medical Device Registration",
+    "Cosmetics Registration",
+    "Food Supplements Registration",
+    "Regulatory Affairs Saudi Arabia",
+  ],
+};
 // ================= PAGE =================
 export default function ArHomePage() {
   return (
