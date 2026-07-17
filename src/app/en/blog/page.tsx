@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import type { Metadata } from "next";
 const posts = [
   {
     slug: "sfda-registration-overview",
@@ -29,7 +29,11 @@ const posts = [
     date: "2026-01-15",
   },
 ];
-
+export const metadata: Metadata = {
+  title: "Regulatory Affairs Blog | Pharma Registration",
+  description:
+    "Read the latest articles about SFDA regulations, pharmaceutical registration, medical devices, cosmetics, food supplements, regulatory affairs, and compliance.",
+};
 export default function EnBlogPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
