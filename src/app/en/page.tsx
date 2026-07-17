@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Pill,
   Stethoscope,
@@ -101,6 +102,41 @@ const blogPosts: BlogPost[] = [
       "A quick checklist to validate claims, ingredient order, and bilingual label requirements before printing.",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Pharma Registration in Saudi Arabia | Pharma Registration",
+  description:
+    "Professional pharmaceutical registration services in Saudi Arabia. We assist with SFDA registration, regulatory affairs, medical devices, cosmetics, and compliance.",
+  keywords: [
+    "Pharma Registration",
+    "SFDA Registration",
+    "Drug Registration Saudi Arabia",
+    "Medical Device Registration",
+    "Cosmetics Registration",
+    "Food Supplements Registration",
+    "Regulatory Affairs Saudi Arabia",
+    "تسجيل الأدوية",
+    "تسجيل المستحضرات الدوائية",
+    "تسجيل المنتجات الدوائية",
+    "تسجيل الأجهزة الطبية",
+    "تسجيل مستحضرات التجميل",
+    "تسجيل المكملات الغذائية",
+    "تسجيل الأغذية",
+    "الهيئة العامة للغذاء والدواء",
+    "هيئة الغذاء والدواء",
+    "SFDA",
+    "تسجيل دوائي",
+    "التسجيل الدوائي في السعودية",
+    "تسجيل المنتجات في السعودية",
+    "استشارات تنظيمية",
+    "الخدمات التنظيمية",
+    "الامتثال التنظيمي",
+    "ترخيص الشركات الدوائية",
+    "ترخيص شركات الأجهزة الطبية",
+    "ترخيص شركات مستحضرات التجميل",
+    "شؤون تنظيمية",
+  ],
+};
 
 export default function EnHomePage() {
   return (
