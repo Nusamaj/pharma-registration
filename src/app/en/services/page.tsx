@@ -1,5 +1,5 @@
 import { Pill, Stethoscope, Sparkles, Apple, ChevronDown } from "lucide-react";
-
+import type { Metadata } from "next";
 const data = [
   {
     icon: Pill,
@@ -52,7 +52,11 @@ const data = [
     ],
   },
 ];
-
+export const metadata: Metadata = {
+  title: "Pharmaceutical Registration Services | Pharma Registration",
+  description:
+    "Explore our pharmaceutical registration, medical device registration, cosmetics, food supplements, licensing, and SFDA regulatory affairs services in Saudi Arabia.",
+};
 export default function EnServicesPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
