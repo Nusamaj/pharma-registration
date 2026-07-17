@@ -1,6 +1,11 @@
 import React from "react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Contact Us | Pharma Registration",
+  description:
+    "Contact our regulatory affairs experts for pharmaceutical registration, SFDA compliance, medical devices, cosmetics, food supplement registration, and licensing services in Saudi Arabia.",
+};
 export default function ContactEnPage() {
   const cards = [
     {
