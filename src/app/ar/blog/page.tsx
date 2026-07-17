@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import type { Metadata } from "next";
 const posts = [
   {
     slug: "sfda-registration-overview",
@@ -29,7 +29,11 @@ const posts = [
     date: "2026-01-15",
   },
 ];
-
+export const metadata: Metadata = {
+  title: "مدونة الشؤون التنظيمية | Pharma Registration",
+  description:
+    "اطلع على أحدث المقالات حول تسجيل المستحضرات الدوائية، هيئة الغذاء والدواء السعودية (SFDA)، الأجهزة الطبية، مستحضرات التجميل، المكملات الغذائية، والامتثال التنظيمي.",
+};
 export default function ArBlogPage() {
   return (
     <main dir="rtl" className="mx-auto max-w-6xl px-4 py-12 md:py-16">
