@@ -54,11 +54,7 @@ const data = [
 ];
 
 import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "خدمات تسجيل المستحضرات الدوائية | Pharma Registration",
-  description:
-    "نقدم خدمات تسجيل الأدوية والأجهزة الطبية ومستحضرات التجميل والمكملات الغذائية، بالإضافة إلى خدمات الترخيص والاستشارات التنظيمية وفق متطلبات الهيئة العامة للغذاء والدواء السعودية.",
-};
+
 export const metadata: Metadata = {
   title:
     "خدمات الشؤون التنظيمية وتسجيل المنتجات لدى هيئة الغذاء والدواء السعودية",
