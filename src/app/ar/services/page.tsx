@@ -53,8 +53,6 @@ const data = [
   },
 ];
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title:
     "خدمات الشؤون التنظيمية وتسجيل المنتجات لدى هيئة الغذاء والدواء السعودية",
